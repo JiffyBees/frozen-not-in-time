@@ -9,6 +9,10 @@ html {
   border-bottom: solid #b3fbff 8px;
 }
 
+.banner {
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, .15);
+}
+
 h1 {
   color: #990073;
 }
@@ -21,40 +25,158 @@ p {
 .btn-ghost {
   color: #c09;
   border-color: #990073;
+  filter: blur(12px);
+  opacity: 0;
+
+  animation: btn-in .5s .5s linear forwards;
+}
+
+@keyframes btn-in {
+
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+}
+
+.anime {
+  animation: btn-ani .5s .5s linear forwards;
+  filter: blur(12px);
+  opacity: 0;
+}
+
+@keyframes btn-ani {
+
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
 }
 
 .btn-ghost:hover {
   color: #c09;
   border-color: #990073;
-  background-color: rgba(153, 0, 115, 0.2);
+  background-color: rgba(153, 0, 115, .2);
 }
 
 .rotate-header {
   transform-origin: left center;
-  transform:  rotate(-10deg);
-
+  transform: rotate(-10deg);
 }
+
 .rotate {
   transform-origin: left center;
   transform: rotate(-5deg);
 }
 
+.content {
+  min-height: 480px;
+}
+
+.maxy {
+  width: 180px;
+}
+
 .cherry {
-  position: absolute;
+  animation: cherry 1s 1.5s linear forwards;
+  transform-origin: center center;
+  z-index: 120;
+  top: -40em;
 }
 
-.chocolate {
-  position: absolute;
-}
+@keyframes cherry {
 
-.cone {
-  position: absolute;
-}
+  0% {
+    top: -40em;
+  }
 
-.mint {
-  position: absolute;
+  100% {
+    top: -2em;
+  }
+
 }
 
 .fudge {
-  position: absolute;
+  z-index: 97;
+  animation: fudge .7s 1.2s linear forwards;
+  top: -40em;
+}
+
+@keyframes fudge {
+
+  0% {
+    top: -40em;
+  }
+
+  100% {
+    top: 2em;
+  }
+
+}
+
+.chocolate {
+  z-index: 95;
+  animation: pop .7s .9s linear forwards;
+  top: -40em;
+  left: .5em;
+}
+
+@keyframes pop {
+
+  0% {
+    top: -40em;
+  }
+
+  100% {
+    top: 5.5em;
+  }
+
+}
+
+.mint {
+  z-index: 90;
+  animation: drop .7s .6s linear forwards;
+  top: -40em;
+}
+
+@keyframes drop {
+
+  0% {
+    top: -40em;
+  }
+
+  100% {
+    top: 9.5em;
+  }
+
+}
+
+.cone {
+  z-index: 100;
+  animation: slide .7s .2s linear forwards;
+  top: -40em;
+}
+
+@keyframes slide {
+
+  0% {
+    top: -40em;
+  }
+
+  100% {
+    top: 15em;
+  }
+
 }
