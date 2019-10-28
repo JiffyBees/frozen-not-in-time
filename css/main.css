@@ -90,7 +90,7 @@ p {
 }
 
 .cherry {
-  animation: cherry 1s 1.5s linear forwards;
+  animation: cherry .15s 1.5s ease-in forwards;
   transform-origin: center center;
   z-index: 120;
   top: -40em;
@@ -110,7 +110,7 @@ p {
 
 .fudge {
   z-index: 97;
-  animation: fudge .7s 1.2s linear forwards;
+  animation: fudge .2s .9s ease-in forwards;
   top: -40em;
 }
 
@@ -128,7 +128,7 @@ p {
 
 .chocolate {
   z-index: 95;
-  animation: pop .7s .9s linear forwards;
+  animation: pop .3s .6s ease-in forwards;
   top: -40em;
   left: .5em;
 }
@@ -147,7 +147,7 @@ p {
 
 .mint {
   z-index: 90;
-  animation: drop .7s .6s linear forwards;
+  animation: drop .3s .3s ease-in forwards;
   top: -40em;
 }
 
@@ -165,7 +165,7 @@ p {
 
 .cone {
   z-index: 100;
-  animation: slide .7s .2s linear forwards;
+  animation: slide .3s ease-in forwards;
   top: -40em;
 }
 
